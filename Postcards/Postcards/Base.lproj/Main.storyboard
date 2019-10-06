@@ -40,24 +40,38 @@
                                         </view>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="eQt-HQ-XWr" id="5jg-Cw-d4T"/>
+                                    <outlet property="delegate" destination="eQt-HQ-XWr" id="VQf-mZ-Z0Q"/>
+                                </connections>
                             </collectionView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WLH-Yp-voY">
-                                <rect key="frame" x="45" y="318" width="324" height="260"/>
+                                <rect key="frame" x="44.5" y="318" width="325" height="260"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="260" id="Haw-fS-u2i"/>
+                                    <constraint firstAttribute="width" secondItem="WLH-Yp-voY" secondAttribute="height" multiplier="1:0.8" id="oV2-Ln-HCB"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="ZZn-hU-4PE" firstAttribute="top" relation="greaterThanOrEqual" secondItem="WLH-Yp-voY" secondAttribute="bottom" constant="75" id="8FN-5v-lTY"/>
                             <constraint firstItem="ZZn-hU-4PE" firstAttribute="leading" secondItem="R6n-Ae-HkY" secondAttribute="leadingMargin" constant="-16" id="EzZ-OY-5iM"/>
-                            <constraint firstItem="WLH-Yp-voY" firstAttribute="centerX" secondItem="ZZn-hU-4PE" secondAttribute="centerX" id="PDJ-8D-SKv"/>
-                            <constraint firstItem="WLH-Yp-voY" firstAttribute="leading" secondItem="6DB-2S-6V3" secondAttribute="leading" constant="45" id="TuJ-Dg-ico"/>
+                            <constraint firstItem="WLH-Yp-voY" firstAttribute="centerX" secondItem="R6n-Ae-HkY" secondAttribute="centerX" id="NgP-WE-dxE"/>
+                            <constraint firstItem="WLH-Yp-voY" firstAttribute="leading" secondItem="R6n-Ae-HkY" secondAttribute="leadingMargin" constant="24.5" id="P2i-rv-Qp9"/>
                             <constraint firstAttribute="bottomMargin" secondItem="ZZn-hU-4PE" secondAttribute="bottom" constant="20" id="Wcb-l2-cJg"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ZZn-hU-4PE" secondAttribute="trailing" constant="-16" id="XuM-Zw-EAX"/>
-                            <constraint firstItem="WLH-Yp-voY" firstAttribute="top" secondItem="6DB-2S-6V3" secondAttribute="top" constant="230" id="dsA-Ct-vb5"/>
-                            <constraint firstItem="WLH-Yp-voY" firstAttribute="centerY" secondItem="R6n-Ae-HkY" secondAttribute="centerY" id="q6Y-nD-tsM"/>
+                            <constraint firstItem="WLH-Yp-voY" firstAttribute="top" relation="greaterThanOrEqual" secondItem="R6n-Ae-HkY" secondAttribute="topMargin" constant="75" id="b45-ri-6Ly"/>
+                            <constraint firstItem="WLH-Yp-voY" firstAttribute="centerY" secondItem="R6n-Ae-HkY" secondAttribute="centerY" id="hFd-QI-zZz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WLH-Yp-voY" secondAttribute="trailing" constant="24.5" id="tjz-3f-bpM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6DB-2S-6V3"/>
                     </view>
                     <navigationItem key="navigationItem" id="FmX-Mm-4Og"/>
+                    <connections>
+                        <outlet property="colorCollectionView" destination="ZZn-hU-4PE" id="GD8-Oi-Ia4"/>
+                        <outlet property="postcardImageView" destination="WLH-Yp-voY" id="DHw-Br-8aY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GaX-Jl-Ed1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
