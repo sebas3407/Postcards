@@ -21,8 +21,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UITableViewD
         
         for hue in 0...9{
             for sat in 1...10{
-                let color = UIColor(hue: CGFloat(hue/10), saturation: CGFloat(sat/10), brightness: 1.0, alpha: 1.0)
-                colors.append(color)
+                let color = UIColor(hue: CGFloat(hue)/10, saturation: CGFloat(sat)/10, brightness: 1.0, alpha: 1.0)
+                self.colors.append(color)
             }
         }
     }
